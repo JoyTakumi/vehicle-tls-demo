@@ -1,0 +1,8 @@
+﻿# IDE临时文件
+.idea/
+__pycache__/
+.pytest_cache/
+
+# 证书生成中间文件
+*.csr
+*.srl
