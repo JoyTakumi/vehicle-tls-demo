@@ -5,7 +5,7 @@
 
 ##   项目背景  
 
-在阅读您关于车联网安全的论文后，我尝试搭建了一套基于PKI的双向认证原型系统，虽然规模很小，但通过本次实践：  
+在阅读您关于车联网安全的论文后，我尝试搭建了一套基于PKI的双向认证原型系统，通过本次实践：  
 
 - **初步理解**了TLS握手流程中证书校验的核心机制
 - **解决了**OpenSSL签发证书时的`subjectAltName`兼容性问题 
@@ -52,7 +52,7 @@ openssl req -new -key server.key -subj "/CN=carcloud" \
 
   
 
-### 2. 工业级双向认证实现  
+### 2. 基于Flask的双向认证实现  
 ```python  
 # 服务端关键配置（server.py）  
 ssl_context.verify_mode = ssl.CERT_REQUIRED  # 必须验证客户端证书  
